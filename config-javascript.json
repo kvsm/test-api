@@ -1,0 +1,11 @@
+{
+  "apiPackage": "Api",
+  "modelPackage": "Model",
+  "projectName": "test-api",
+  "projectDescription": "Test API",
+  "projectVersion": "1.0.0",
+  "usePromises": true,
+  "useES6": true,
+  "licenseName": "MIT",
+  "licenseUrl": "https://opensource.org/licenses/MIT"
+}

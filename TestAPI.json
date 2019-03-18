@@ -1,0 +1,259 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "TestAPI",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/things": {
+      "summary": "Path used to manage the list of Things.",
+      "description": "The REST endpoint/path used to list and create zero or more `Thing` entities.  This path contains a `GET` and `POST` operation to perform the list and create tasks, respectively.",
+      "get": {
+        "summary": "List All Things",
+        "description": "Gets a list of all `Thing` entities.",
+        "operationId": "getThings",
+        "responses": {
+          "200": {
+            "description": "Successful response - returns an array of `Thing` entities.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Thing"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a Thing",
+        "description": "Creates a new instance of a `Thing`.",
+        "operationId": "createThing",
+        "requestBody": {
+          "description": "A new `Thing` to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Thing"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful response."
+          }
+        }
+      }
+    },
+    "/things/{thingId}": {
+      "summary": "Path used to manage a single Thing.",
+      "description": "The REST endpoint/path used to get, update, and delete single instances of an `Thing`.  This path contains `GET`, `PUT`, and `DELETE` operations used to perform the get, update, and delete tasks, respectively.",
+      "get": {
+        "summary": "Get a Thing",
+        "description": "Gets the details of a single instance of a `Thing`.",
+        "operationId": "getThing",
+        "responses": {
+          "200": {
+            "description": "Successful response - returns a single `Thing`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Thing"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a Thing",
+        "description": "Updates an existing `Thing`.",
+        "operationId": "updateThing",
+        "requestBody": {
+          "description": "Updated `Thing` information.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Thing"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a Thing",
+        "description": "Deletes an existing `Thing`.",
+        "operationId": "deleteThing",
+        "responses": {
+          "204": {
+            "description": "Successful response."
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "thingId",
+          "in": "path",
+          "description": "A unique identifier for a `Thing`.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/describedThings": {
+      "summary": "Path used to manage the list of DescribedThings.",
+      "description": "The REST endpoint/path used to list and create zero or more `DescribedThing` entities.  This path contains a `GET` and `POST` operation to perform the list and create tasks, respectively.",
+      "get": {
+        "summary": "List All DescribedThings",
+        "description": "Gets a list of all `DescribedThing` entities.",
+        "operationId": "getDescribedThings",
+        "responses": {
+          "200": {
+            "description": "Successful response - returns an array of `DescribedThing` entities.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DescribedThing"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a DescribedThing",
+        "description": "Creates a new instance of a `DescribedThing`.",
+        "operationId": "createDescribedThing",
+        "requestBody": {
+          "description": "A new `DescribedThing` to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DescribedThing"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful response."
+          }
+        }
+      }
+    },
+    "/describedThings/{describedThingId}": {
+      "summary": "Path used to manage a single DescribedThing.",
+      "description": "The REST endpoint/path used to get, update, and delete single instances of an `DescribedThing`.  This path contains `GET`, `PUT`, and `DELETE` operations used to perform the get, update, and delete tasks, respectively.",
+      "get": {
+        "summary": "Get a DescribedThing",
+        "description": "Gets the details of a single instance of a `DescribedThing`.",
+        "operationId": "getDescribedThing",
+        "responses": {
+          "200": {
+            "description": "Successful response - returns a single `DescribedThing`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DescribedThing"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a DescribedThing",
+        "description": "Updates an existing `DescribedThing`.",
+        "operationId": "updateDescribedThing",
+        "requestBody": {
+          "description": "Updated `DescribedThing` information.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DescribedThing"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful response."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a DescribedThing",
+        "description": "Deletes an existing `DescribedThing`.",
+        "operationId": "deleteDescribedThing",
+        "responses": {
+          "204": {
+            "description": "Successful response."
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "describedThingId",
+          "in": "path",
+          "description": "A unique identifier for a `DescribedThing`.",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "Thing": {
+        "title": "Root Type for Thing",
+        "description": "The root of the Thing type's schema.",
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "example": "{\n    \"name\": \"Apple\"\n}"
+      },
+      "DescribedThing": {
+        "title": "Root Type for DescribedThing",
+        "description": "The root of the DescribedThing type's schema.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Thing"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "example": "{\n    \"name\": \"Apple\",\n    \"description\": \"A description\"\n}"
+      }
+    }
+  }
+}
