@@ -19,7 +19,7 @@ import Thing from '../Model/Thing';
 /**
 * Default service.
 * @module Api/DefaultApi
-* @version 0.1.0
+* @version 1.0.0
 */
 export default class DefaultApi {
 
@@ -44,12 +44,10 @@ export default class DefaultApi {
      */
     createDescribedThingWithHttpInfo(describedThing) {
       let postBody = describedThing;
-
       // verify the required parameter 'describedThing' is set
       if (describedThing === undefined || describedThing === null) {
         throw new Error("Missing the required parameter 'describedThing' when calling createDescribedThing");
       }
-
 
       let pathParams = {
       };
@@ -64,11 +62,10 @@ export default class DefaultApi {
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/describedThings', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -94,12 +91,10 @@ export default class DefaultApi {
      */
     createThingWithHttpInfo(thing) {
       let postBody = thing;
-
       // verify the required parameter 'thing' is set
       if (thing === undefined || thing === null) {
         throw new Error("Missing the required parameter 'thing' when calling createThing");
       }
-
 
       let pathParams = {
       };
@@ -114,11 +109,10 @@ export default class DefaultApi {
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/things', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -144,12 +138,10 @@ export default class DefaultApi {
      */
     deleteDescribedThingWithHttpInfo(describedThingId) {
       let postBody = null;
-
       // verify the required parameter 'describedThingId' is set
       if (describedThingId === undefined || describedThingId === null) {
         throw new Error("Missing the required parameter 'describedThingId' when calling deleteDescribedThing");
       }
-
 
       let pathParams = {
         'describedThingId': describedThingId
@@ -165,11 +157,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/describedThings/{describedThingId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -195,12 +186,10 @@ export default class DefaultApi {
      */
     deleteThingWithHttpInfo(thingId) {
       let postBody = null;
-
       // verify the required parameter 'thingId' is set
       if (thingId === undefined || thingId === null) {
         throw new Error("Missing the required parameter 'thingId' when calling deleteThing");
       }
-
 
       let pathParams = {
         'thingId': thingId
@@ -216,11 +205,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/things/{thingId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -246,12 +234,10 @@ export default class DefaultApi {
      */
     getDescribedThingWithHttpInfo(describedThingId) {
       let postBody = null;
-
       // verify the required parameter 'describedThingId' is set
       if (describedThingId === undefined || describedThingId === null) {
         throw new Error("Missing the required parameter 'describedThingId' when calling getDescribedThing");
       }
-
 
       let pathParams = {
         'describedThingId': describedThingId
@@ -267,11 +253,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = DescribedThing;
-
       return this.apiClient.callApi(
         '/describedThings/{describedThingId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -297,7 +282,6 @@ export default class DefaultApi {
     getDescribedThingsWithHttpInfo() {
       let postBody = null;
 
-
       let pathParams = {
       };
       let queryParams = {
@@ -311,11 +295,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [DescribedThing];
-
       return this.apiClient.callApi(
         '/describedThings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -340,12 +323,10 @@ export default class DefaultApi {
      */
     getThingWithHttpInfo(thingId) {
       let postBody = null;
-
       // verify the required parameter 'thingId' is set
       if (thingId === undefined || thingId === null) {
         throw new Error("Missing the required parameter 'thingId' when calling getThing");
       }
-
 
       let pathParams = {
         'thingId': thingId
@@ -361,11 +342,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Thing;
-
       return this.apiClient.callApi(
         '/things/{thingId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -391,7 +371,6 @@ export default class DefaultApi {
     getThingsWithHttpInfo() {
       let postBody = null;
 
-
       let pathParams = {
       };
       let queryParams = {
@@ -405,11 +384,10 @@ export default class DefaultApi {
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [Thing];
-
       return this.apiClient.callApi(
         '/things', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -435,17 +413,14 @@ export default class DefaultApi {
      */
     updateDescribedThingWithHttpInfo(describedThingId, describedThing) {
       let postBody = describedThing;
-
       // verify the required parameter 'describedThingId' is set
       if (describedThingId === undefined || describedThingId === null) {
         throw new Error("Missing the required parameter 'describedThingId' when calling updateDescribedThing");
       }
-
       // verify the required parameter 'describedThing' is set
       if (describedThing === undefined || describedThing === null) {
         throw new Error("Missing the required parameter 'describedThing' when calling updateDescribedThing");
       }
-
 
       let pathParams = {
         'describedThingId': describedThingId
@@ -461,11 +436,10 @@ export default class DefaultApi {
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/describedThings/{describedThingId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
@@ -493,17 +467,14 @@ export default class DefaultApi {
      */
     updateThingWithHttpInfo(thingId, thing) {
       let postBody = thing;
-
       // verify the required parameter 'thingId' is set
       if (thingId === undefined || thingId === null) {
         throw new Error("Missing the required parameter 'thingId' when calling updateThing");
       }
-
       // verify the required parameter 'thing' is set
       if (thing === undefined || thing === null) {
         throw new Error("Missing the required parameter 'thing' when calling updateThing");
       }
-
 
       let pathParams = {
         'thingId': thingId
@@ -519,11 +490,10 @@ export default class DefaultApi {
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
-
       return this.apiClient.callApi(
         '/things/{thingId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 

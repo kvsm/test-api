@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TestApi);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.DescribedThing();
+    instance = new TestApi.DescribedThing();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DescribedThing', function() {
     it('should create an instance of DescribedThing', function() {
       // uncomment below and update the code to test DescribedThing
-      //var instane = new BitpesaSdk.DescribedThing();
-      //expect(instance).to.be.a(BitpesaSdk.DescribedThing);
+      //var instane = new TestApi.DescribedThing();
+      //expect(instance).to.be.a(TestApi.DescribedThing);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new BitpesaSdk.DescribedThing();
+      //var instane = new TestApi.DescribedThing();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new BitpesaSdk.DescribedThing();
+      //var instane = new TestApi.DescribedThing();
       //expect(instance).to.be();
     });
 

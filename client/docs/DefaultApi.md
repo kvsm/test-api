@@ -1,4 +1,4 @@
-# BitpesaSdk.DefaultApi
+# TestApi.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,10 +26,10 @@ Creates a new instance of a &#x60;DescribedThing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
-let describedThing = new BitpesaSdk.DescribedThing(); // DescribedThing | A new `DescribedThing` to be created.
+let apiInstance = new TestApi.DefaultApi();
+let describedThing = new TestApi.DescribedThing(); // DescribedThing | A new `DescribedThing` to be created.
 apiInstance.createDescribedThing(describedThing).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -67,10 +67,10 @@ Creates a new instance of a &#x60;Thing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
-let thing = new BitpesaSdk.Thing(); // Thing | A new `Thing` to be created.
+let apiInstance = new TestApi.DefaultApi();
+let thing = new TestApi.Thing(); // Thing | A new `Thing` to be created.
 apiInstance.createThing(thing).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -108,9 +108,9 @@ Deletes an existing &#x60;DescribedThing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let describedThingId = "describedThingId_example"; // String | A unique identifier for a `DescribedThing`.
 apiInstance.deleteDescribedThing(describedThingId).then(() => {
   console.log('API called successfully.');
@@ -149,9 +149,9 @@ Deletes an existing &#x60;Thing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let thingId = "thingId_example"; // String | A unique identifier for a `Thing`.
 apiInstance.deleteThing(thingId).then(() => {
   console.log('API called successfully.');
@@ -190,9 +190,9 @@ Gets the details of a single instance of a &#x60;DescribedThing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let describedThingId = "describedThingId_example"; // String | A unique identifier for a `DescribedThing`.
 apiInstance.getDescribedThing(describedThingId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -231,9 +231,9 @@ Gets a list of all &#x60;DescribedThing&#x60; entities.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 apiInstance.getDescribedThings().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -268,9 +268,9 @@ Gets the details of a single instance of a &#x60;Thing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let thingId = "thingId_example"; // String | A unique identifier for a `Thing`.
 apiInstance.getThing(thingId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -309,9 +309,9 @@ Gets a list of all &#x60;Thing&#x60; entities.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 apiInstance.getThings().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -346,11 +346,11 @@ Updates an existing &#x60;DescribedThing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let describedThingId = "describedThingId_example"; // String | A unique identifier for a `DescribedThing`.
-let describedThing = new BitpesaSdk.DescribedThing(); // DescribedThing | Updated `DescribedThing` information.
+let describedThing = new TestApi.DescribedThing(); // DescribedThing | Updated `DescribedThing` information.
 apiInstance.updateDescribedThing(describedThingId, describedThing).then(() => {
   console.log('API called successfully.');
 }, (error) => {
@@ -389,11 +389,11 @@ Updates an existing &#x60;Thing&#x60;.
 
 ### Example
 ```javascript
-import BitpesaSdk from 'bitpesa-sdk';
+import TestApi from 'test-api';
 
-let apiInstance = new BitpesaSdk.DefaultApi();
+let apiInstance = new TestApi.DefaultApi();
 let thingId = "thingId_example"; // String | A unique identifier for a `Thing`.
-let thing = new BitpesaSdk.Thing(); // Thing | Updated `Thing` information.
+let thing = new TestApi.Thing(); // Thing | Updated `Thing` information.
 apiInstance.updateThing(thingId, thing).then(() => {
   console.log('API called successfully.');
 }, (error) => {

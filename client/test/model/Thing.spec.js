@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TestApi);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.Thing();
+    instance = new TestApi.Thing();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('Thing', function() {
     it('should create an instance of Thing', function() {
       // uncomment below and update the code to test Thing
-      //var instane = new BitpesaSdk.Thing();
-      //expect(instance).to.be.a(BitpesaSdk.Thing);
+      //var instane = new TestApi.Thing();
+      //expect(instance).to.be.a(TestApi.Thing);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new BitpesaSdk.Thing();
+      //var instane = new TestApi.Thing();
       //expect(instance).to.be();
     });
 

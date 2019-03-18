@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BitpesaSdk);
+    factory(root.expect, root.TestApi);
   }
-}(this, function(expect, BitpesaSdk) {
+}(this, function(expect, TestApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BitpesaSdk.DefaultApi();
+    instance = new TestApi.DefaultApi();
   });
 
   var getProperty = function(object, getter, property) {

@@ -1,4 +1,4 @@
-# BitpesaSdk.DescribedThing
+# TestApi.DescribedThing
 
 ## Properties
 Name | Type | Description | Notes

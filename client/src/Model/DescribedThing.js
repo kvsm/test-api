@@ -17,7 +17,7 @@ import Thing from './Thing';
 /**
  * The DescribedThing model module.
  * @module Model/DescribedThing
- * @version 0.1.0
+ * @version 1.0.0
  */
 class DescribedThing {
     /**
